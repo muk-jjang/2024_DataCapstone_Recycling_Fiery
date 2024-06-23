@@ -94,7 +94,7 @@ torchvision==0.15.2+cu117
 tqdm==4.66.2
 transformers==4.38.2
 triton==2.0.0
-typing_extensions==4.10.0
+typing_extensions==4.12.2
 tzdata==2024.1
 urllib3==2.2.1
 virtualenv==20.25.1
