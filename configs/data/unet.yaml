@@ -1,0 +1,6 @@
+_target_: src.data.unet_datamodule.PETDataModule
+data_dir: /data2/local_datasets/recycling/clean
+batch_size: 16 # Needs to be divisible by the number of devices (e.g., if in a distributed setup)
+train_val_test_split: [0.8, 0.1, 0.1]
+num_workers: 1
+pin_memory: True

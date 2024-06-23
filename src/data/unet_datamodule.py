@@ -7,6 +7,7 @@ from torchvision.transforms import v2
 import os
 import pandas as pd
 from PIL import Image
+from rembg import remove
 
 class PETDataset(Dataset):
     def __init__(self, data_dir, dataset_type='train', transform=None):
@@ -25,7 +26,6 @@ class PETDataset(Dataset):
 
     def __getitem__(self, idx):
         img_path = os.path.join(self.img_dir, self.img_labels.iloc[idx, 0] + '.jpg')
-        image = Image.open(img_path).convert("L")
         if self.transform:
             image = self.transform(image)
         
@@ -100,7 +100,10 @@ class PETDataModule(LightningDataModule):
 
         # data transformations
         self.transforms = v2.Compose(
-            [v2.ToTensor()]
+            [v2.ToTensor(),
+             #r
+             v2.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.0),
+            ]
         )
 
         self.data_train: Optional[Dataset] = None

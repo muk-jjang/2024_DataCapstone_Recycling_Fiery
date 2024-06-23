@@ -8,9 +8,9 @@ from torchmetrics.classification import MulticlassPrecision, MulticlassRecall
 import numpy as np
 import wandb
 
-wandb.init(project='EfficientNet_b4_1')
-wandb.run.name = 'EfficientNet_b4_color'
-wandb.run.save()
+# wandb.init(project='EfficientNet_b4_label8')
+# wandb.run.name = 'EfficientNet_b4_label8'
+# wandb.run.save()
 
 class PetModule(LightningModule):
     """Example of a `LightningModule` for MNIST classification.
@@ -75,17 +75,17 @@ class PetModule(LightningModule):
         self.criterion = torch.nn.CrossEntropyLoss()
 
         # metric objects for calculating and averaging accuracy across batches
-        self.train_acc = Accuracy(task="multiclass", num_classes=4)
-        self.val_acc = Accuracy(task="multiclass", num_classes=4)
-        self.test_acc = Accuracy(task="multiclass", num_classes=4)
+        self.train_acc = Accuracy(task="multiclass", num_classes=8)
+        self.val_acc = Accuracy(task="multiclass", num_classes=8)
+        self.test_acc = Accuracy(task="multiclass", num_classes=8)
 
-        self.train_recall = MulticlassRecall(num_classes=4)
-        self.val_recall = MulticlassRecall(num_classes=4)
-        self.test_recall = MulticlassRecall(num_classes=4)
+        self.train_recall = MulticlassRecall(num_classes=8)
+        self.val_recall = MulticlassRecall(num_classes=8)
+        self.test_recall = MulticlassRecall(num_classes=8)
 
-        self.train_precision = MulticlassPrecision(num_classes=4)
-        self.val_precision = MulticlassPrecision(num_classes=4)
-        self.test_precision = MulticlassPrecision(num_classes=4)
+        self.train_precision = MulticlassPrecision(num_classes=8)
+        self.val_precision = MulticlassPrecision(num_classes=8)
+        self.test_precision = MulticlassPrecision(num_classes=8)
 
 
         # for averaging loss across batches
@@ -158,7 +158,7 @@ class PetModule(LightningModule):
         self.log("train/acc", self.train_acc, on_step=False, on_epoch=True, prog_bar=True)
         self.log("train/recall", self.train_recall, on_step=False, on_epoch=True, prog_bar=True)
         self.log("train/precision", self.train_precision, on_step=False, on_epoch=True, prog_bar=True)
-        wandb.log({"train/loss": self.train_loss.compute(), "train/acc": self.train_acc.compute(), "train/recall": self.train_recall.compute(), "train/precision": self.train_precision.compute()})
+        #wandb.log({"train/loss": self.train_loss.compute(), "train/acc": self.train_acc.compute(), "train/recall": self.train_recall.compute(), "train/precision": self.train_precision.compute()})
 
         # return loss or backpropagation will fail
         return loss
@@ -186,7 +186,7 @@ class PetModule(LightningModule):
         self.log("val/acc", self.val_acc, on_step=False, on_epoch=True, prog_bar=True)
         self.log("val/recall", self.val_recall, on_step=False, on_epoch=True, prog_bar=True)
         self.log("val/precision", self.val_precision, on_step=False, on_epoch=True, prog_bar=True)
-        wandb.log({"val/loss": self.val_loss.compute(), "val/acc": self.val_acc.compute(), "val/recall": self.val_recall.compute(), "val/precision": self.val_precision.compute()})
+       # wandb.log({"val/loss": self.val_loss.compute(), "val/acc": self.val_acc.compute(), "val/recall": self.val_recall.compute(), "val/precision": self.val_precision.compute()})
         
 
     def on_validation_epoch_end(self) -> None:
@@ -217,7 +217,7 @@ class PetModule(LightningModule):
         self.log("test/acc", self.test_acc, on_step=False, on_epoch=True, prog_bar=True)
         self.log("test/recall", self.test_recall, on_step=False, on_epoch=True, prog_bar=True)
         self.log("test/precision", self.test_precision, on_step=False, on_epoch=True, prog_bar=True)
-        wandb.log({"test/loss": self.test_loss.compute(), "test/acc": self.test_acc.compute(), "test/recall": self.test_recall.compute(), "test/precision": self.test_precision.compute()})
+        #wandb.log({"test/loss": self.test_loss.compute(), "test/acc": self.test_acc.compute(), "test/recall": self.test_recall.compute(), "test/precision": self.test_precision.compute()})
 
 
     def on_test_epoch_end(self) -> None:

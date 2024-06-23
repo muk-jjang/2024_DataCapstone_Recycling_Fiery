@@ -10,7 +10,7 @@ import numpy as np
 import wandb
 
 wandb.init(project='UNet')
-wandb.run.name = 'UNet_no_aug'
+wandb.run.name = 'UNet_no_aug_8down'
 wandb.run.save()
 
 class UnetModule(LightningModule):

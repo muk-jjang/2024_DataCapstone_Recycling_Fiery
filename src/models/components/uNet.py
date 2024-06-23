@@ -87,5 +87,3 @@ class uNet(nn.Module):
 
 if __name__ == "__main__":
     _ = uNet()
-
-        

@@ -8,19 +8,20 @@ import os
 import pandas as pd
 from PIL import Image
 
+
 class PETDataset(Dataset):
     def __init__(self, data_dir,dataset_type = 'train', transform=None, target_transform=None):
         if dataset_type == 'train':
-            self.annotation_file = data_dir + 'pet_balance_csv_file_TRAIN.csv'
+            self.annotation_file = data_dir + 'pet_label_csv_file2_TRAIN.csv'
         elif dataset_type == 'test':
-            self.annotation_file = data_dir + 'pet_balance_csv_file_TEST.csv'
+            self.annotation_file = data_dir + 'pet_label_csv_file2_TEST.csv'
 
         self.img_labels = pd.read_csv(self.annotation_file,header=0, names=['file_name', 'label'])
         
         if dataset_type == 'train':
-            self.img_dir = data_dir + 'train/'
+            self.img_dir = data_dir + 'train2/'
         elif dataset_type == 'test':
-            self.img_dir = data_dir + 'test/'
+            self.img_dir = data_dir + 'test2/'
         self.transform = transform
     def __len__(self):
         return len(self.img_labels)
@@ -32,7 +33,7 @@ class PETDataset(Dataset):
             image = self.transform(image)
         
         label = int(self.img_labels.iloc[idx, 1]) -1 # Convert label to int
-        one_hot_label = torch.nn.functional.one_hot(torch.tensor(label), num_classes=4)
+        one_hot_label = torch.nn.functional.one_hot(torch.tensor(label), num_classes=8)
         
 
         return image, one_hot_label
@@ -159,13 +160,13 @@ class PETDataModule(LightningDataModule):
                 # v2.RandomHorizontalFlip(),
                 # v2.RandomVerticalFlip(),
                 # v2.RandomRotation(30),
-                # v2.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.0),
+                v2.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.0),
                 v2.ToTensor(),  # Convert PIL image to tensor
             ])
             original_dataset = PETDataset(self.hparams.data_dir, transform=self.transforms)
             augmented_dataset = PETDataset(self.hparams.data_dir, transform=data_augmentation_transforms)
             # Concatenate original dataset with augmented dataset
-            #trainset = ConcatDataset([original_dataset, augmented_dataset])
+            trainset = ConcatDataset([original_dataset, augmented_dataset])
             self.data_train, self.data_val = random_split(
                 dataset=original_dataset,
                 lengths=self.hparams.train_val_test_split,
