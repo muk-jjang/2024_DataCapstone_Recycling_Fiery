@@ -47,10 +47,14 @@ Combining classification models(with Data Augmentation), outlier detection model
 
 - Design and implementation of an RVM system that complies with domestic separate collection regulations
 - Pursuit of accuracy and performance through a combination of artificial intelligence model and physical device
-  **2. Experiments**
+
+**2. Experiments**
+
 - Performance verification of classification model and encoder-decoder model
 - Improving efficiency and saving resources by using Arduino electronic scales
-  **3. Results**
+
+**3. Results**
+
 - EfficientNet performed better than ResNet
 - The enhancement technique needs to be adjusted for the most effective details due to the dataset characteristics of ColorJitter
 - U-Net needs further experimentation with practical coupling to RVM systems
