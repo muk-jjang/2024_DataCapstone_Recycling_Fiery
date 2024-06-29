@@ -1,4 +1,4 @@
-# Fiery RVM for Korea: KHU Data Capstone Design Project
+# Fiery: RVM for Korea: KHU Data Capstone Design Project
 
 ---
 
@@ -10,9 +10,34 @@ This repository is for Data Capstone Design Project
 
 ## Problem Definition
 
+Since high-quality PET (PolyEthylene Terephtalate) recycled materials can be obtained from clear plastic bottles, Korea's separate collection regulations require that clear plastic bottles be separated from colored bottles and other plastics, and that they be disposed of with external and internal debris such as plastic labels, liquids, and residue removed.
+
+One of the factors that hinders the recycling process in the existing system is the lack of personal control over recycling.
+
+This makes it necessary to sort them separately, which leads to a waste of resources, money, and time. To solve these problems, this study aims to improve the PET bottle separation collection system by utilizing artificial intelligence technology and implement an RVM system for domestic adoption.
+
 ---
 
 ## Approach
+
+### Classification Model
+
+- ResNet-50
+- EfficientNet b4
+
+### Anomaly Dection
+
+- Light U-Net
+
+### Physical devices
+
+- Arduino Electronic Scale
+  <img src="./docs/RVM_scenario.png" width="200" height="200"/>
+  <img src="./docs/Arduino_weight.png" width="200" height="200"/>
+
+Combining classification models(with Data Augmentation), outlier detection models(for clear Pet Detection), and Arduino scales
+
+flow is like
 
 ---
 
@@ -88,5 +113,4 @@ conda activate myenv
 
 # install requirements
 pip install -r requirements.txt
-pip install -r requirements2.txt
 ```
