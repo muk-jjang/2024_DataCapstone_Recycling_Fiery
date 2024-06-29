@@ -3,10 +3,10 @@ from webcam import process_frame
 from model import load_model
 import cv2
 import os
+import time
 
 app = Flask(__name__, template_folder=os.path.abspath('templates'))
-
-model = load_model('unet_nodown.ckpt')
+model = load_model('EfficientNet_best.ckpt')
 
 @app.route('/')
 def index():
@@ -20,8 +20,10 @@ def gen_frames():
             break
         else:
             # 프레임 처리 및 예측
-            is_recyclable, ssim_value, psnr_value = process_frame(frame, model)
-            if is_recyclable:
+            is_recyclable, predicted_frame = process_frame(frame, model)
+            print(is_recyclable[0])
+            print(predicted_frame)
+            if is_recyclable == 1:
                 text = "Recyclable"
             else:
                 text = "Not Recyclable"
