@@ -1,6 +1,14 @@
+# Fiery RVM for Korea: KHU Data Capstone Design Project
+
+---
+
+This repository is for Data Capstone Design Project
+
+![RVM Flow](./docs/RVM_flow.png)
+
 ## Project Structure
 
-The directory structure: ** pytorch lightning hydra template from https://github.com/ashleve/lightning-hydra-template **
+The directory structure: pytorch lightning hydra template from https://github.com/ashleve/lightning-hydra-template
 
 ```
 ├── .github                   <- Github Actions workflows
