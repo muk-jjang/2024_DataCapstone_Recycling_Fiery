@@ -35,11 +35,9 @@ This makes it necessary to sort them separately, which leads to a waste of resou
 <figure class="half">  
 <a href="link"><img src="./docs/RVM_scenario.png"></a>  
 <a href="link"><img src="./docs/Arduino_weight.png"></a>  
-<figcaption>Arduino.</figcaption></figure>
+</figure>
   <br />
-  
-  <img src="./docs/RVM_scenario.png" width="500" height="500"/>
-  <img src="./docs/Arduino_weight.png" width="500" height="500"/>
+
 
 Combining classification models(with Data Augmentation), outlier detection models(for clear Pet Detection), and Arduino scales
 
