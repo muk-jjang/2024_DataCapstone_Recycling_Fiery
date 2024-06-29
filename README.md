@@ -2,7 +2,7 @@
 
 ---
 
-This repository is for Data Capstone Design Project
+This repository is for Data Analysis Capstone Design Project
 
 <img src="./docs/RVM_flow.png" width="500" height="500"/>
 
@@ -10,11 +10,11 @@ This repository is for Data Capstone Design Project
 
 ## Problem Definition
 
-Since high-quality PET (PolyEthylene Terephtalate) recycled materials can be obtained from clear plastic bottles, Korea's separate collection regulations require that clear plastic bottles be separated from colored bottles and other plastics, and that they be disposed of with external and internal debris such as plastic labels, liquids, and residue removed.
+Since high-quality PET (PolyEthylene Terephtalate) recycled materials can be obtained from clear plastic bottles, Korea's recyclable material separation collection regulations, in this case regarding the collection of clear plastic bottles (or PET bottles), require that clear plastic bottles be separated from colored bottles and other plastics, and that they be disposed of with external and internal debris such as plastic labels, liquids, and residue removed.
 
-One of the factors that hinders the recycling process in the existing system is the lack of personal control over recycling.
+One of the factors that hinders the recycling process in the existing system is the lack of personal control over recycling, as individuals do not strongly feel the need to recycle plastic bottles in the socially correct method.
 
-This makes it necessary to sort them separately, which leads to a waste of resources, money, and time. To solve these problems, this study aims to improve the PET bottle separation collection system by utilizing artificial intelligence technology and implement an RVM system for domestic adoption.
+This creates the need for an additional separation phase to separate other substances/materials that are mixed with the clear plastic bottle load. This leads to a waste of resources, money, and time. To solve these problems, this study aims to improve the PET bottle separation collection system by utilizing artificial intelligence technology and implementing an RVM system for domestic adoption.
 
 ---
 
@@ -52,7 +52,7 @@ Combining classification models(with Data Augmentation), outlier detection model
 **2. Experiments**
 
 - Performance verification of classification model and encoder-decoder model
-- Improving efficiency and saving resources by using Arduino electronic scales
+- Improving efficiency and saving resources by using Arduino digital scales
 
 **3. Results**
 
