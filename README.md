@@ -41,6 +41,20 @@ Combining classification models(with Data Augmentation), outlier detection model
 
 ---
 
+## Conclusion
+
+**1. Purpose**
+
+- Design and implementation of an RVM system that complies with domestic separate collection regulations
+- Pursuit of accuracy and performance through a combination of artificial intelligence model and physical device
+  **2. Experiments**
+- Performance verification of classification model and encoder-decoder model
+- Improving efficiency and saving resources by using Arduino electronic scales
+  **3. Results**
+- EfficientNet performed better than ResNet
+- The enhancement technique needs to be adjusted for the most effective details due to the dataset characteristics of ColorJitter
+- U-Net needs further experimentation with practical coupling to RVM systems
+
 ## Project Structure
 
 The directory structure: pytorch lightning hydra template from https://github.com/ashleve/lightning-hydra-template
