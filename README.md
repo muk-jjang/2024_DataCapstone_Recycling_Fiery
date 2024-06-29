@@ -38,7 +38,6 @@ This makes it necessary to sort them separately, which leads to a waste of resou
 </figure>
   <br />
 
-
 Combining classification models(with Data Augmentation), outlier detection models(for clear Pet Detection), and Arduino scales
 
 ---
@@ -127,7 +126,7 @@ The directory structure: pytorch lightning hydra template from https://github.co
 
 ```bash
 # clone project
-git clone https://github.com/muk-jjang/-capstone-Recycling_Fiery.git
+git clone https://github.com/muk-jjang/2024_DataCapstone_Recycling_Fiery.git
 
 # [OPTIONAL] create conda environment
 conda create -n myenv python=3.9
