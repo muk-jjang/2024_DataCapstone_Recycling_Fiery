@@ -4,7 +4,7 @@
 
 This repository is for Data Capstone Design Project
 
-![RVM Flow](./docs/RVM_flow.png){: width="60" height="60"}
+<img src="./docs/RVM_flow.png" width="60" height="80"/>
 
 ## Project Structure
 
