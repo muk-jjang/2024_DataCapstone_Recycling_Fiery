@@ -4,7 +4,17 @@
 
 This repository is for Data Capstone Design Project
 
-<img src="./docs/RVM_flow.png" width="60" height="80"/>
+<img src="./docs/RVM_flow.png" width="200" height="200"/>
+
+---
+
+## Problem Definition
+
+---
+
+## Approach
+
+---
 
 ## Project Structure
 
@@ -80,7 +90,3 @@ conda activate myenv
 pip install -r requirements.txt
 pip install -r requirements2.txt
 ```
-
-## Problem Definition
-
-## Approach
