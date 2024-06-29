@@ -4,7 +4,7 @@
 
 This repository is for Data Capstone Design Project
 
-<img src="./docs/RVM_flow.png" width="200" height="200"/>
+<img src="./docs/RVM_flow.png" width="500" height="500"/>
 
 ---
 
@@ -33,9 +33,9 @@ This makes it necessary to sort them separately, which leads to a waste of resou
 
 - Arduino Electronic Scale
   <br />
-  <img src="./docs/RVM_scenario.png" width="200" height="200"/>
+  <img src="./docs/RVM_scenario.png" width="500" height="500"/>
   <br />
-  <img src="./docs/Arduino_weight.png" width="200" height="200"/>
+  <img src="./docs/Arduino_weight.png" width="500" height="500"/>
 
 Combining classification models(with Data Augmentation), outlier detection models(for clear Pet Detection), and Arduino scales
 
