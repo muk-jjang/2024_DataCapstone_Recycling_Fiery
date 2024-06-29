@@ -1,9 +1,11 @@
 ## Project Structure
 
-The directory structure of new project looks like this:
+The directory structure: ** pytorch lightning hydra template from https://github.com/ashleve/lightning-hydra-template **
 
 ```
 ├── .github                   <- Github Actions workflows
+|
+├── cam                       <- web cam, Flask, Arduino
 │
 ├── configs                   <- Hydra configs
 │   ├── callbacks                <- Callbacks configs
@@ -70,3 +72,7 @@ conda activate myenv
 pip install -r requirements.txt
 pip install -r requirements2.txt
 ```
+
+## Problem Definition
+
+## Approach
