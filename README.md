@@ -32,12 +32,12 @@ This makes it necessary to sort them separately, which leads to a waste of resou
 ### Physical devices
 
 - Arduino Electronic Scale
+  <br />
   <img src="./docs/RVM_scenario.png" width="200" height="200"/>
+  <br />
   <img src="./docs/Arduino_weight.png" width="200" height="200"/>
 
 Combining classification models(with Data Augmentation), outlier detection models(for clear Pet Detection), and Arduino scales
-
-flow is like
 
 ---
 
