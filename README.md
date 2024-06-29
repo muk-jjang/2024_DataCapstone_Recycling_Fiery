@@ -34,7 +34,6 @@ This makes it necessary to sort them separately, which leads to a waste of resou
 - Arduino Electronic Scale
   <br />
   <img src="./docs/RVM_scenario.png" width="500" height="500"/>
-  <br />
   <img src="./docs/Arduino_weight.png" width="500" height="500"/>
 
 Combining classification models(with Data Augmentation), outlier detection models(for clear Pet Detection), and Arduino scales
@@ -58,6 +57,8 @@ Combining classification models(with Data Augmentation), outlier detection model
 - EfficientNet performed better than ResNet
 - The enhancement technique needs to be adjusted for the most effective details due to the dataset characteristics of ColorJitter
 - U-Net needs further experimentation with practical coupling to RVM systems
+
+---
 
 ## Project Structure
 
