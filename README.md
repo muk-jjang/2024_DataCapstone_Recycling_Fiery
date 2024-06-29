@@ -4,7 +4,7 @@
 
 This repository is for Data Capstone Design Project
 
-![RVM Flow](./docs/RVM_flow.png)
+![RVM Flow](/Users/yunseongjun/Desktop/SEONG_JOON/project/capstone/capstone_recycling/docs/RVM_flow.png)
 
 ## Project Structure
 
