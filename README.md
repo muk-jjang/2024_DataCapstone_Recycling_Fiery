@@ -27,8 +27,8 @@ This creates the need for an additional separation phase to separate other subst
 
 <table>
   <tr>
-    <td><a href="link"><img src="./docs/ResNet_precision.png" width="300"></a></td>
-    <td><a href="link"><img src="./docs/ResNet_recall.png" width="300"></a></td>
+    <td><a href="link"><img src="./docs/ResNet_precision_train.png" width="500"></a></td>
+    <td><a href="link"><img src="./docs/ResNet_recall_train.png" width="500"></a></td>
   </tr>
 </table>
 
@@ -36,8 +36,8 @@ This creates the need for an additional separation phase to separate other subst
 
 <table>
   <tr>
-    <td><a href="link"><img src="./docs/EfficientNet_train_precision.png" width="300"></a></td>
-    <td><a href="link"><img src="./docs/EfficientNet_train_recall.png" width="300"></a></td>
+    <td><a href="link"><img src="./docs/EfficientNet_train_precision.png" width="500"></a></td>
+    <td><a href="link"><img src="./docs/EfficientNet_trainm_recall.png" width="500"></a></td>
   </tr>
 </table>
 
@@ -47,8 +47,8 @@ This creates the need for an additional separation phase to separate other subst
 
 <table>
   <tr>
-    <td><a href="link"><img src="./docs/Unet_train_psnr.png" width="300"></a></td>
-    <td><a href="link"><img src="./docs/Unet_train_ssim.png" width="300"></a></td>
+    <td><a href="link"><img src="./docs/Unet_train_psnr.png" width="500"></a></td>
+    <td><a href="link"><img src="./docs/Unet_train_ssim.png" width="500"></a></td>
   </tr>
 </table>
 
