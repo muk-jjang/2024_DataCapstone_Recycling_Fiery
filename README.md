@@ -18,16 +18,39 @@ This creates the need for an additional separation phase to separate other subst
 
 ---
 
-## Approach
+## Approach, Experiment Result
 
 ### Classification Model
 
 - ResNet-50
 - EfficientNet b4
 
+<table>
+  <tr>
+    <td><a href="link"><img src="./docs/ResNet_precision.png" width="300"></a></td>
+    <td><a href="link"><img src="./docs/ResNet_recall.png" width="300"></a></td>
+  </tr>
+</table>
+
+<br />
+
+<table>
+  <tr>
+    <td><a href="link"><img src="./docs/EfficientNet_train_precision.png" width="300"></a></td>
+    <td><a href="link"><img src="./docs/EfficientNet_train_recall.png" width="300"></a></td>
+  </tr>
+</table>
+
 ### Anomaly Dection
 
 - Light U-Net
+
+<table>
+  <tr>
+    <td><a href="link"><img src="./docs/Unet_train_psnr.png" width="300"></a></td>
+    <td><a href="link"><img src="./docs/Unet_train_ssim.png" width="300"></a></td>
+  </tr>
+</table>
 
 ### Physical devices
 
